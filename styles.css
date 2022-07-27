@@ -1,0 +1,71 @@
+body {
+  background-color: lightcyan;
+}
+#calculator {
+  max-width: 600px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "dis dis dis dis"
+    "clear clearOne divide multiply"
+    "seven eight nine substract"
+    "four five six add"
+    "one two three equal"
+    "zero zero decimal equal";
+}
+.padButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: rgb(51, 51, 51);
+  border: 1px solid black;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px black;
+}
+#zero {
+  grid-area: zero;
+}
+#equals {
+  grid-area: equal;
+  background-color: rgb(94, 94, 94);
+  z-index: 3;
+}
+.display {
+  grid-area: dis;
+  background-color: darkgray;
+  text-align: right;
+  font-size: 1.5em;
+  box-shadow: 1px 1px 1px 1px black;
+  border: 2px double black;
+}
+#clear {
+  background-color: rgb(189, 47, 47);
+}
+#clearOne {
+  font-size: 2em;
+}
+#display {
+  width: 95%;
+  padding: 5px;
+  margin: 5px 10px;
+  text-align: right;
+  border: 1px solid black;
+  color: black;
+}
+.total {
+  padding: 5px;
+  margin: 10px 10px;
+  margin-left: 20px;
+  min-height: 50px;
+  color: rgb(17, 17, 17);
+  background-color: rgba(239, 239, 239, 0.7);
+  width: 95%;
+  border: 1px solid black;
+}
